@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "bot.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "app/Controller/*.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "createMessage",
+      "dest": "app/Controllers/Message.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/bot.js"
+    }
+  ]
+}
