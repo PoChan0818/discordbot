@@ -29,7 +29,7 @@ client.on("messageCreate", async (message) => {
 
   try {
     let $datas = await axios.post(
-      "http://localhost/discordBot/createMessage",
+      "https://crazyones-three.vercel.app/createMessage",
       data
     );
     const replyMessage = $datas.data || "Server did not respond.";
